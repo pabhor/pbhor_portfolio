@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import bakariFoundationImg from '../assets/bakari-foundation.JPG';
+import bakariFoundationImg from '../assets/bakari-foundation.jpeg';
 import canKitchenImg from '../assets/can-kitchen.jpg';
 
 interface SlideCarouselProps {

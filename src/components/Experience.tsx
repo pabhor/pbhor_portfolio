@@ -1,4 +1,3 @@
-import React from 'react';
 import salesforceLogo from '../assets/salesforce-logo.png';
 import yahooLogo from '../assets/yahoo-logo.png';
 import utAustinLogo from '../assets/ut-austin-logo.png';

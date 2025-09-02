@@ -1,6 +1,5 @@
-import React from 'react';
 import headshotImg from '../assets/headshot.png';
-import graduationImg from '../assets/graduation.JPG';
+import graduationImg from '../assets/graduation.jpeg';
 
 const About = () => {
   return (
