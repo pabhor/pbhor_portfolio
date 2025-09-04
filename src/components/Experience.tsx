@@ -1,6 +1,9 @@
 import salesforceLogo from '../assets/salesforce-logo.png';
 import yahooLogo from '../assets/yahoo-logo.png';
 import utAustinLogo from '../assets/ut-austin-logo.png';
+import hclLogo from '../assets/hcl-tech.jpeg';
+import deloitteLogo from '../assets/deloitte.jpg';
+
 
 const Experience = () => {
   const experiences = [
@@ -51,6 +54,21 @@ const Experience = () => {
       logo: salesforceLogo
     },
     {
+      role: "Technical Program Manager Intern",
+      company: "HCL Technologies",
+      location: "Remote",
+      period: "February 2024 – May 2024",
+      type: "Program Management",
+      description: "Managed global product resources and client relationships while driving cross-functional collaboration to reduce escalations and improve service delivery efficiency.",
+      achievements: [
+        "Owned and maintained a global progress tracker, successfully allocating 45% of product resources in APAC and AMER regions",
+        "Collaborated with 10+ internal & external cross-functional stakeholders to reduce client escalations by 60% in two months",
+        "Partnered with global engineering teams to prioritize 10+ client requests daily, guaranteeing prompt and efficient service delivery"
+      ],
+      color: "bg-orange-100 text-orange-800 border-orange-200",
+      logo: hclLogo
+    },
+    {
       role: "Software Engineer Intern, Full-Stack",
       company: "Salesforce",
       location: "San Francisco, CA",
@@ -64,6 +82,20 @@ const Experience = () => {
       ],
       color: "bg-blue-100 text-blue-800 border-blue-200",
       logo: salesforceLogo
+    },
+    {
+      role: "Strategy Consulting Intern",
+      company: "Deloitte Consulting",
+      location: "Austin, TX",
+      period: "June 2022 – July 2022",
+      type: "Consulting",
+      description: "Led cross-functional teams on nation-wide consulting projects, delivering impact-driven solutions and strategic recommendations to key stakeholders.",
+      achievements: [
+        "Led teams of 8+ on two nation-wide projects, leveraging top-tier consulting practices and reporting to five key stakeholders",
+        "Synthesized a pro-bono and impact-driven solution to expand service access for 50K+ United Way clients in Central Maryland"
+      ],
+      color: "bg-emerald-100 text-emerald-800 border-emerald-200",
+      logo: deloitteLogo
     }
   ];
 

@@ -93,9 +93,9 @@ const About = () => {
                 <div>
                   <p className="font-medium text-slate-800">Currently Learning</p>
                   <div className="flex flex-wrap gap-2 mt-2">
-                    <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">Catalan</span>
-                    <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">Portuguese</span>
                     <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">German</span>
+                    <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">Portuguese</span>
+                    <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">Catalan</span>
                   </div>
                 </div>
               </div>

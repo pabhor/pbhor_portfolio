@@ -254,7 +254,7 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
           <p className="text-lg text-slate-600 mt-6 max-w-2xl mx-auto">
-            A showcase of impactful projects from nonprofit CRM systems to AI/ML platforms
+            A showcase of impactful projects from nonprofit CRM systems to infrastructure observability
           </p>
         </div>
 

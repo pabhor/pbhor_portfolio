@@ -9,7 +9,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
           <p className="text-lg text-slate-300 mt-6 max-w-2xl mx-auto">
-            I'm actively seeking full-time opportunities for Fall 2025. Let's discuss how I can contribute to your team.
+            I'm actively seeking full-time opportunities for 2026. Let's discuss how I can contribute to your team.
           </p>
         </div>
 
