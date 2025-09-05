@@ -155,6 +155,12 @@ const About = () => {
               resilience, and passion for innovation to help companies grow and succeed in our increasingly 
               connected world.
             </p>
+            
+            <div className="mt-8 pt-6 border-t border-slate-200">
+              <p className="text-sm text-slate-600">
+                U.S. Citizen • No work authorization restrictions
+              </p>
+            </div>
         </div>
       </div>
     </section>
