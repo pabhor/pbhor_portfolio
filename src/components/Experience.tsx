@@ -3,10 +3,37 @@ import yahooLogo from '../assets/yahoo-logo.png';
 import utAustinLogo from '../assets/ut-austin-logo.png';
 import hclLogo from '../assets/hcl-tech.jpeg';
 import deloitteLogo from '../assets/deloitte.jpg';
+import anthropicLogo from '../assets/anthropic.png';
 
 
 const Experience = () => {
   const experiences = [
+    {
+      role: "Claude Builder Ambassador",
+      company: "Anthropic",
+      location: "Austin, TX",
+      period: "August 2025 - Present",
+      type: "Growth & Adoption",
+      description: "Leading campus community development and AI literacy initiatives to drive Claude adoption among university developers and researchers.",
+      achievements: [
+        "Founding and scaling UT Claude Builder club to foster AI development skills and expand Claude's campus presence"
+      ],
+      color: "bg-orange-100 text-orange-800 border-orange-200",
+      logo: anthropicLogo
+    },
+    {
+      role: "Teaching Assistant",
+      company: "University of Texas at Austin",
+      location: "Austin, TX",
+      period: "August 2025 - Present",
+      type: "Education",
+      description: "Supporting full-stack web development instruction, teaching React fundamentals and modern JavaScript frameworks to undergraduate students.",
+      achievements: [
+        "Mentoring 15+ students in React, Node.js, and database integration while leading weekly lab sessions and code reviews"
+      ],
+      color: "bg-blue-100 text-blue-800 border-blue-200",
+      logo: utAustinLogo
+    },
     {
       role: "Product Manager Intern, AI/ML Platform",
       company: "Yahoo!",
