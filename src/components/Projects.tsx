@@ -31,12 +31,12 @@ const SlideCarousel: React.FC<SlideCarouselProps> = ({ slides, title }) => {
       <div className="mt-4">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
+          className="flex items-center gap-3 px-6 py-3 bg-black text-white font-bold text-sm uppercase hover:bg-gray-800 transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
           </svg>
-          View Presentation ({slides.length} slides)
+          PRESENTATION ({slides.length} SLIDES)
         </button>
       </div>
 
@@ -246,98 +246,103 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-white to-blue-50/30">
+    <section id="projects" className="py-20 bg-black">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Featured Projects
+        <div className="mb-16">
+          <h2 className="text-6xl md:text-7xl font-black text-white mb-8">
+            PROJECTS
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
-          <p className="text-lg text-slate-600 mt-6 max-w-2xl mx-auto">
-            A showcase of impactful projects from nonprofit CRM systems to infrastructure observability
-          </p>
+          <div className="w-32 h-2 bg-gradient-to-r from-red-600 via-yellow-400 to-blue-600"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className={`border-2 ${project.color} rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] bg-white/80 backdrop-blur-sm group cursor-pointer`}>
-              {project.image && (
-                <div className="h-56 overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              )}
-              <div className={`${project.bgColor} p-6 border-b border-current border-opacity-20`}>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-medium text-slate-600 uppercase tracking-wide">
-                    {project.category}
-                  </span>
-                  {project.period && (
-                    <span className="text-xs text-slate-500 font-medium">
-                      {project.period}
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {project.description}
-                </p>
-              </div>
-
-              <div className="p-6 bg-white">
-                <div className="mb-6">
-                  <h4 className="font-semibold text-slate-900 mb-3">Key Highlights:</h4>
-                  <ul className="space-y-2">
-                    {project.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-slate-600">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-slate-900 mb-3">Technologies & Skills:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium flex items-center gap-1 hover:bg-slate-200 hover:scale-105 transition-all duration-200">
-                        <span className="group-hover:rotate-12 transition-transform duration-300">
-                          {getTechIcon(tech)}
-                        </span>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Slide Carousel Integration */}
-                <SlideCarousel slides={project.slides || []} title={project.title} />
-
-                {/* Website Link */}
-                {project.website && (
-                  <div className="mt-4">
-                    <a
-                      href={project.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-sm font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                      </svg>
-                      Visit Live Website
-                    </a>
+        <div className="grid lg:grid-cols-2 gap-12">
+          {projects.map((project, index) => {
+            // Define color schemes for each project
+            const colorSchemes = [
+              'hover:border-green-500 hover:bg-green-50', // Bakari Foundation
+              'hover:border-purple-500 hover:bg-purple-50', // CAN Kitchen
+              'hover:border-blue-500 hover:bg-blue-50', // LA3S
+              'hover:border-orange-500 hover:bg-orange-50' // Salesforce Dashboard
+            ];
+            
+            return (
+              <div key={index} className={`border-4 border-white bg-white ${colorSchemes[index]} group transition-all duration-300`}>
+                {project.image && (
+                  <div className="h-64 border-b-4 border-black group-hover:border-current">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
+                    />
                   </div>
                 )}
+                
+                <div className="p-8">
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-4 py-1 bg-black text-white text-sm font-bold uppercase tracking-wide">
+                        {project.category}
+                      </span>
+                      {project.period && (
+                        <span className="text-sm font-bold text-gray-600">
+                          {project.period}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-3xl font-black text-black mb-4">
+                      {project.title}
+                    </h3>
+                    <p className="text-lg text-black font-medium leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="mb-8">
+                    <h4 className="text-xl font-black text-black mb-4">KEY HIGHLIGHTS</h4>
+                    <ul className="space-y-3">
+                      {project.highlights.map((highlight, idx) => (
+                        <li key={idx} className="flex items-start gap-4">
+                          <div className="w-3 h-3 bg-black mt-2 flex-shrink-0"></div>
+                          <span className="text-black font-medium">{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-8">
+                    <h4 className="text-xl font-black text-black mb-4">TECHNOLOGIES</h4>
+                    <div className="flex flex-wrap gap-3">
+                      {project.technologies.map((tech, idx) => (
+                        <span key={idx} className="px-4 py-2 border-2 border-black text-black font-bold text-sm uppercase">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                    {/* Slide Carousel Integration */}
+                    <SlideCarousel slides={project.slides || []} title={project.title} />
+
+                    {/* Website Link */}
+                    {project.website && (
+                      <a
+                        href={project.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 px-6 py-3 bg-black text-white font-bold text-sm uppercase hover:bg-gray-800 transition-colors"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                        VISIT WEBSITE
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>
