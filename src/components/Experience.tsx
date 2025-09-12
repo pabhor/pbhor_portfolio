@@ -127,57 +127,62 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-slate-50 to-purple-50/20">
+    <section id="experience" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Experience
+        <div className="mb-16">
+          <h2 className="text-6xl md:text-7xl font-black text-black mb-8">
+            EXPERIENCE
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
-          <p className="text-lg text-slate-600 mt-6 max-w-2xl mx-auto">
-            A diverse background spanning software engineering, AI research, and product management
-          </p>
+          <div className="w-32 h-2 bg-gradient-to-r from-blue-600 via-red-600 to-yellow-400"></div>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group">
+            <div key={index} className="border-4 border-black p-8 bg-white relative">
               {exp.logo && (
                 <img 
                   src={exp.logo}
                   alt={`${exp.company} logo`}
-                  className="absolute top-6 right-6 h-12 w-auto object-contain opacity-80 group-hover:opacity-90 transition-opacity duration-300"
+                  className="absolute top-8 right-8 h-16 w-auto object-contain hover:grayscale-0 transition-all duration-300"
                 />
               )}
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
-                <div className="flex-1 pr-16">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-2xl font-bold text-slate-900">{exp.role}</h3>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium border ${exp.color}`}>
+              
+              <div className="pr-24">
+                <div className="mb-6">
+                  <div className="flex items-center gap-4 mb-2">
+                    <h3 className="text-3xl font-black text-black">{exp.role}</h3>
+                    <span className={`px-4 py-1 text-white text-sm font-bold uppercase ${
+                      exp.type === 'Product Management' ? 'bg-blue-600' :
+                      exp.type === 'Engineering' ? 'bg-red-600' :
+                      exp.type === 'Research' ? 'bg-yellow-600' :
+                      exp.type === 'Consulting' ? 'bg-green-600' :
+                      exp.type === 'Education' ? 'bg-purple-600' :
+                      exp.type === 'Program Management' ? 'bg-orange-600' :
+                      exp.type === 'Growth & Adoption' ? 'bg-pink-600' :
+                      'bg-black'
+                    }`}>
                       {exp.type}
                     </span>
                   </div>
-                  <div className="mb-2">
-                    <p className="text-lg text-blue-600 font-medium">{exp.company}</p>
-                  </div>
-                  <p className="text-slate-500 text-sm">{exp.location} • {exp.period}</p>
+                  <p className="text-2xl font-bold text-black mb-2">{exp.company}</p>
+                  <p className="text-lg font-medium text-gray-600">{exp.location} • {exp.period}</p>
                 </div>
-              </div>
 
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                {exp.description}
-              </p>
+                <p className="text-lg text-black mb-8 leading-relaxed font-medium">
+                  {exp.description}
+                </p>
 
-              <div>
-                <h4 className="font-semibold text-slate-900 mb-3">Key Achievements:</h4>
-                <ul className="space-y-2">
-                  {exp.achievements.map((achievement, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-slate-600">{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <h4 className="text-xl font-black text-black mb-4">KEY ACHIEVEMENTS</h4>
+                  <ul className="space-y-3">
+                    {exp.achievements.map((achievement, idx) => (
+                      <li key={idx} className="flex items-start gap-4">
+                        <div className="w-4 h-4 bg-black mt-1 flex-shrink-0"></div>
+                        <span className="text-black font-medium leading-relaxed">{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))}
