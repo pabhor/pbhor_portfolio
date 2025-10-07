@@ -1,129 +1,48 @@
-import salesforceLogo from '../assets/salesforce-logo.png';
-import yahooLogo from '../assets/yahoo-logo.png';
-import utAustinLogo from '../assets/ut-austin-logo.png';
-import hclLogo from '../assets/hcl-tech.jpeg';
-import deloitteLogo from '../assets/deloitte.jpg';
-import anthropicLogo from '../assets/anthropic.png';
+import campalinImg from '../assets/campalin_logo.jpg';
+import dmceImg from '../assets/dmce.logo.png';
+import GsoImg from '../assets/GSO.png';
 
 
 const Experience = () => {
   const experiences = [
     {
-      role: "Claude Builder Ambassador",
-      company: "Anthropic",
-      location: "Austin, TX",
-      period: "August 2025 - Present",
-      type: "Growth & Adoption",
-      description: "Leading campus community development and AI literacy initiatives to drive Claude adoption among university developers and researchers.",
+      role: "President / Co-Founder",
+      company: " Graduate Student Organisation (GSO)",
+      location: "Binghamton, NY",
+      period: "Jun 25 - Present",
+      type: "Data-Driven Leadership",
+      description: "Driving data-informed policy reforms and student engagement growth through executive leadership and applied NLP insights",
       achievements: [
-        "Founding and scaling UT Claude Builder club to foster AI development skills and expand Claude's campus presence"
-      ],
+        " Taking Inclusive initiative uniting all 6 graduate schools student of binghamton, boosting student engagement by 35%"],
       color: "bg-orange-100 text-orange-800 border-orange-200",
-      logo: anthropicLogo
+      logo: GsoImg
     },
     {
-      role: "Teaching Assistant",
-      company: "University of Texas at Austin",
-      location: "Austin, TX",
-      period: "August 2025 - Present",
+      role: "Research Assistant",
+      company: "University of Mumbai",
+      location: "Navi Mumbai, india",
+      period: "January 2023 - May 2024",
       type: "Education",
-      description: "Supporting full-stack web development instruction, teaching React fundamentals and modern JavaScript frameworks to undergraduate students.",
+      description: " Built a flood classification model using a fine-tuned Mobile Net CNN, applying transfer learning to accurately distinguish between flood and non-flood images across a 2,100-image dataset. This helped achieve high precision while keeping the model lightweight for potential deployment in low-resource environments.",
       achievements: [
-        "Mentoring 15+ students in React, Node.js, and database integration while leading weekly lab sessions and code reviews"
+        " Publication : Bhor, P., & Raut, C. (2024). Deep Flood: Leveraging Deep Learning for Flood Inundation Modeling and Disaster Management Preparedness. Journal of Engineering and Technology Management, Volume 72. DOI: 20.14118/v72.2024.101960"
       ],
-      color: "bg-blue-100 text-blue-800 border-blue-200",
-      logo: utAustinLogo
+      color: "bg-blue-100 text-blue-800 border-blue-300",
+      logo: dmceImg
     },
     {
-      role: "Product Manager Intern, AI/ML Platform",
-      company: "Yahoo!",
+      role: "Machine Learning Intern, AI/ML Platform",
+      company: "Campalin Innovations!",
       location: "Remote",
-      period: "June 2025 – August 2025",
-      type: "Product Management",
-      description: "Driving the development of multilingual AI/ML features for email classification, bridging research and engineering to create scalable prototypes for international markets.",
+      period: "September 2023 – October 2023",
+      type: "Software Development",
+      description: "Driving the development of  AI/ML features for costumer churn classification based on consumer feedback loop",
       achievements: [
-        "Drove development of multilingual email classification tool set to reach 700k+ users and generate $35k monthly revenue",
-        "Delivered production-ready ML models through roadmap ownership and PRD creation, processing 19M+ daily email traffic",
-        "Bridged research and engineering teams to develop scalable ML prototypes, establishing go-to framework for internationalization"
+        "Built a machine learning model to predict customer churn by combining Random Forest, Gradient Boosting, and SVM models, achieving a ROC AUC of 0.823 to identify customers likely to leave. "
       ],
       color: "bg-purple-100 text-purple-800 border-purple-200",
-      logo: yahooLogo
+      logo: campalinImg
     },
-    {
-      role: "Research Assistant, AI & Ethics",
-      company: "University of Texas at Austin",
-      location: "Austin, TX",
-      period: "June 2025 – August 2025",
-      type: "Research",
-      description: "Conducting cutting-edge research on AI explainability and bias in human decision-making, leveraging AWS cloud infrastructure for large-scale data collection and analysis.",
-      achievements: [
-        "Conducting research with Professor Maria De-Arteaga on AI explainability to study how LLMs bias human decision-making",
-        "Served as SME on experimental design and MTurk workflows; leveraged AWS Lambda + S3 for real-time crowdsourcing",
-        "Managed data collection from 3K+ participants using principled sampling methods to support unbiased algorithmic outcomes"
-      ],
-      color: "bg-green-100 text-green-800 border-green-200",
-      logo: utAustinLogo
-    },
-    {
-      role: "Software Engineer Intern, Monitoring & Observability",
-      company: "Salesforce",
-      location: "San Francisco, CA",
-      period: "May 2024 – August 2024",
-      type: "Engineering",
-      description: "Developed real-time monitoring solutions for enterprise-scale cloud infrastructure, improving observability across thousands of services and enhancing user experience for site reliability engineers.",
-      achievements: [
-        "Developed and owned real-time monitoring dashboard on Grafana, ensuring observability of 8k+ services across public clouds",
-        "Collaborated with product manager and 7-member agile team to design UI and align features with product strategy",
-        "Designed, developed and deployed API decreasing request time by 400% and improving UX for 100+ SREs",
-        "Retrieved and processed Argus queries via Java-based API integrations to view real-time SLOs of mission-critical AI tools"
-      ],
-      color: "bg-blue-100 text-blue-800 border-blue-200",
-      logo: salesforceLogo
-    },
-    {
-      role: "Technical Program Manager Intern",
-      company: "HCL Technologies",
-      location: "Remote",
-      period: "February 2024 – May 2024",
-      type: "Program Management",
-      description: "Managed global product resources and client relationships while driving cross-functional collaboration to reduce escalations and improve service delivery efficiency.",
-      achievements: [
-        "Owned and maintained a global progress tracker, successfully allocating 45% of product resources in APAC and AMER regions",
-        "Collaborated with 10+ internal & external cross-functional stakeholders to reduce client escalations by 60% in two months",
-        "Partnered with global engineering teams to prioritize 10+ client requests daily, guaranteeing prompt and efficient service delivery"
-      ],
-      color: "bg-orange-100 text-orange-800 border-orange-200",
-      logo: hclLogo
-    },
-    {
-      role: "Software Engineer Intern, Full-Stack",
-      company: "Salesforce",
-      location: "San Francisco, CA",
-      period: "June 2023 – August 2023",
-      type: "Engineering",
-      description: "Led full-stack development initiatives and team leadership, focusing on user experience optimization and strategic product vision development.",
-      achievements: [
-        "Spearheaded end-to-end development of 5+ full stack web applications using React, Node, Express, AWS, and PostgreSQL",
-        "Led team of three engineer interns in establishing strategic product vision and Agile sprint plan for capstone project",
-        "Researched product usability to inform engineering and UX teams, boosting completion rates by 25% in user testing"
-      ],
-      color: "bg-blue-100 text-blue-800 border-blue-200",
-      logo: salesforceLogo
-    },
-    {
-      role: "Strategy Consulting Intern",
-      company: "Deloitte Consulting",
-      location: "Austin, TX",
-      period: "June 2022 – July 2022",
-      type: "Consulting",
-      description: "Led cross-functional teams on nation-wide consulting projects, delivering impact-driven solutions and strategic recommendations to key stakeholders.",
-      achievements: [
-        "Led teams of 8+ on two nation-wide projects, leveraging top-tier consulting practices and reporting to five key stakeholders",
-        "Synthesized a pro-bono and impact-driven solution to expand service access for 50K+ United Way clients in Central Maryland"
-      ],
-      color: "bg-emerald-100 text-emerald-800 border-emerald-200",
-      logo: deloitteLogo
-    }
   ];
 
   return (

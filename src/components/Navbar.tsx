@@ -37,7 +37,7 @@ const Navbar = () => {
               isScrolled ? 'text-black' : 'text-white'
             }`}
           >
-            CÉSAR
+             &#123;Prabhu Bhor&#125;
           </a>
 
           {/* Desktop Navigation */}

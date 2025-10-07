@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import bakariFoundationImg from '../assets/bakari-foundation.jpeg';
-import canKitchenImg from '../assets/can-kitchen.jpg';
+import HepatitisImg from '../assets/liver.jpg';
+import IEEEImg from '../assets/conference.jpg';
 
 interface SlideCarouselProps {
   slides: string[];
@@ -118,78 +118,91 @@ const SlideCarousel: React.FC<SlideCarouselProps> = ({ slides, title }) => {
 const Projects = () => {
   const projects = [
     {
-      title: "Bakari Foundation CRM",
-      category: "Solutions Architecture",
-      description: "Built complete Salesforce CRM system for nonprofit, migrating 2k+ donor records with custom automation.",
-      technologies: ["Salesforce NPSP", "Data Migration", "CRM Architecture", "Automation"],
-      highlights: [
-        "Migrated 2k+ records with custom validation rules",
-        "Owned complete technical delivery from design to QA",
-        "Educated stakeholders on technical constraints & MVP scope"
-      ],
+      title: "Hepatitis C Stage Prediction – Biomedical ML Project",
+      category: "Biomedical Machine Learning",
+        description:
+          "Developed a multinomial logistic regression model in Python to classify Hepatitis C stages (early, suspected, advanced) using patient biomarker and clinical data. Achieved 97% accuracy and 97% F1-score in multi-class predictions. Conducted univariate and bivariate data analysis to identify key clinical markers (e.g., ALT, BIL, AST), and applied correlation heatmaps with variance filtering to select relevant features, enhancing model interpretability and clinical reliability.",
+        technologies: ["Python", "Logistic Regression", "Pandas", "Scikit-learn", "Data Analysis", "Biomedical Data"],
+        highlights: [
+            "Built a multinomial logistic regression model for Hepatitis C stage classification",
+            "Achieved 97% accuracy and 97% F1-score in multi-class predictions",
+            "Performed univariate and bivariate analysis to evaluate key biomarkers (ALT, BIL, AST)",
+            "Enhanced model interpretability with correlation heatmaps and variance-based feature selection",
+            "Applied ML techniques to improve healthcare decision-making in biomedical contexts"
+          ],
       color: "border-green-500",
       bgColor: "bg-green-50",
       period: "May 2025",
-      image: bakariFoundationImg,
+      image: HepatitisImg,
       slides: [
         // Add your Google Slides embed URLs here
-        "https://docs.google.com/presentation/d/e/2PACX-1vR14UMSguyfWQ4lMfckKj2i3w9-zX3aS0ni3BkE6394TmBgnonQKB1-5EkGDgofNLfwCiPhgbfDSnb7/pubembed?start=false&loop=false&delayms=3000"
+        "https://docs.google.com/presentation/d/1l1UsaeMKnKY9FY9-ty0tQJ8TL1I0rawn/edit?usp=sharing&ouid=104053972983588249258&rtpof=true&sd=true"
       ]
     },
     {
-      title: "CAN Kitchen Recipe Finder",
-      category: "Product & Engineering",
-      description: "Recipe finder web app built with Food Shift nonprofit, optimized for accessibility and social impact.",
-      technologies: ["Product Strategy", "Web Development", "Accessibility", "SEO"],
-      highlights: [
-        "30% improvement in accessibility & SEO scores",
-        "End-to-end delivery from concept to deployment", 
-        "Strategic nonprofit partnership with Food Shift"
-      ],
+        title: "Synergy of AI & Music – Research Project",
+        category: "AI & Creative Systems",
+        description:
+          "Developed an LSTM-based music generator trained on MIDI sequences to achieve ~85% accuracy in melodic pattern retention. Designed a custom encoding pipeline to convert MIDI files into Nx89 binary matrix format, enabling effective deep learning input and improving note-sequence prediction consistency across diverse compositions. Implemented a sliding window training strategy to capture both short-term and long-term dependencies, reducing unnatural transitions by ~40% compared to traditional RNNs, and enhancing output fluidity.",
+        technologies: ["LSTM", "Deep Learning", "MIDI", "Music Generation", "Python"],
+        highlights: [
+              "Engineered an LSTM-based music generator with ~85% accuracy in melodic pattern retention",
+              "Converted MIDI files into Nx89 binary matrix format through a custom encoding pipeline",
+              "Implemented sliding window training to capture both short- and long-term dependencies",
+              "Reduced unnatural transitions by ~40% compared to traditional RNNs",
+              "Published and Presented research at the International Conference on Advanced Science and Technology (ICAST 2023)"
+          ],
       color: "border-purple-500",
       bgColor: "bg-purple-50",
       period: "August 2023",
-      image: canKitchenImg,
+      image: IEEEImg,
+      alt : "Profile",
+      className: "w-full h-full object-contain",
       slides: [
         // Add your Google Slides embed URLs here
       ],
-      website: "https://capstonecan.web.app/"
+       website : "https://ieeexplore.ieee.org/document/10455075"
     },
     {
-      title: "LA3S: Large-scale Annotation Platform",
-      category: "AI Research & Systems",
-      description: "Productionized AI research experiment using serverless AWS architecture for automated data collection at scale.",
-      technologies: ["AWS Lambda", "MTurk API", "Serverless", "Data Pipeline", "CloudWatch"],
+      title: "Sentiment Analysis on Cryptocurrency News",
+      category: "CRYPTO Finance Review",
+      description:
+        "Developed a real-time sentiment analysis system by scraping cryptocurrency articles from leading news sources (e.g., CNBC, DW) via Google News RSS using BeautifulSoup and Newspaper3k, enabling structured data collection across custom timeframes. Implemented NLP-based sentiment scoring with TextBlob to extract polarity and subjectivity metrics, classifying sentiment into positive, neutral, or negative categories to analyze public influence on crypto market behavior.",
+      technologies: ["AWS", "BeautifulSoup", "Newspaper3k", "TextBlob", "NLP", "Data Pipeline"],
       highlights: [
-        "Built fully automated research infrastructure",
-        "Serverless architecture with real-time processing",
-        "Scaled experiment to 1k+ participants with zero intervention",
-        "End-to-end AWS pipeline from collection to storage"
-      ],
+          "Built an end-to-end, fully automated AWS pipeline from data collection to storage",
+          "Implemented serverless architecture for real-time data processing",
+          "Extracted and categorized sentiment metrics (positive, neutral, negative) from news articles",
+          "Analyzed sentiment trends across multiple channels to assess public perception of cryptocurrency markets"
+          ],
       color: "border-blue-500",
       bgColor: "bg-blue-50",
-      period: "June 2025 - Present",
+      period : "March 2025",
       slides: [
         // Add your Google Slides embed URLs here
-        "https://docs.google.com/presentation/d/e/2PACX-1vSUNS1ZeHR9pvCaNkJNUhLuZHBeDdYPAZK01nOAPg60o1V23dFyi9rIXit8fp5rBa-4lwE6edpbCwcw/pubembed?start=false&loop=false&delayms=3000"
+        //"https://docs.google.com/presentation/d/e/2PACX-1vSUNS1ZeHR9pvCaNkJNUhLuZHBeDdYPAZK01nOAPg60o1V23dFyi9rIXit8fp5rBa-4lwE6edpbCwcw/pubembed?start=false&loop=false&delayms=3000"
       ]
     },
     {
-      title: "Salesforce Monitoring Dashboard",
-      category: "Software Engineering",
-      description: "Real-time monitoring dashboard for 8k+ cloud services, improving SRE observability and workflows.",
-      technologies: ["Grafana", "Java", "API Development", "Cloud Infrastructure"],
+
+      title: "MedVision / Medical Image Classifier",
+      category: "AI / LLM Development",
+      description:
+        "Built and deployed a medical image classification system leveraging Generative AI APIs and LLM-based prompt engineering to enhance diagnostic accuracy and showcase scalable AI applications in healthcare. Designed and implemented the model architecture with a Streamlit-based interface to provide interactive visualization and improve end-user usability.",
+      technologies: ["GenAI API", "LLM", "Streamlit", "Deep Learning", "Medical Imaging"],
       highlights: [
-        "8k+ services monitored across public clouds",
-        "400% faster API response times for 100+ SREs",
-        "Real-time observability & alerting system"
+        "Developed a medical image classifier integrating Generative AI APIs with LLM-driven prompt generation",
+        "Improved diagnostic accuracy through advanced model design and deployment",
+        "Built an interactive, user-friendly Streamlit interface for visualization and usability",
+        "Demonstrated scalable AI applications tailored to healthcare domains"
       ],
+
       color: "border-orange-500",
       bgColor: "bg-orange-50",
-      period: "August 2024",
+      period: "August 2025",
       slides: [
         // Add your Google Slides embed URLs here
-        "https://docs.google.com/presentation/d/e/2PACX-1vSZuOvieWFmlPwjXkmYOfcpdgHBtaiJGqSaC-jvtXiegY-69N3dDWmgIK0i2iny8rtLZbY5XgMb9R69/pubembed?start=false&loop=false&delayms=3000"
+        //"https://docs.google.com/presentation/d/e/2PACX-1vSZuOvieWFmlPwjXkmYOfcpdgHBtaiJGqSaC-jvtXiegY-69N3dDWmgIK0i2iny8rtLZbY5XgMb9R69/pubembed?start=false&loop=false&delayms=3000"
       ]
     }
   ];
